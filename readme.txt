@@ -4,6 +4,7 @@ cd khdc_Django
 
 2.	경로 지정
 cd C:\Users\컴퓨터이름\khdc_Django
+
 3.	가상환경 생성 및 활성화
 python -m venv venv
 venv\Scripts\activate
