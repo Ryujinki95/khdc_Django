@@ -1,31 +1,43 @@
-<!-- blog/templates/blog/index.html -->
 {% load static %}
 
 <!DOCTYPE html>
 <html>
 <head>
-  <title>메인 페이지</title>
+  <title>Main</title>
   <style>
+    .center-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
     .buttons {
       margin-top: 20px;
     }
+
     .buttons a {
       margin: 5px;
     }
   </style>
 </head>
 <body>
-  <h1>2023873018 유진기</h1>
+  <div class="center-container">
 
-  <!-- 이미지 삽입 -->
-  <img src="{% static 'blog/logo1.png' %}" alt="로고 이미지" width="200">
+    <h1>2023873018 유진기</h1>
 
+    <!-- 이미지 삽입 -->
+    <img src="{% static 'blog/logo1.png' %}" 
+         alt="logo image"
+         style="margin: 20px auto; border-radius: 10px;" 
+         width="200">
 
-  <div class="buttons">
-    <a href="{% url 'page1' %}"><button>자기 소개</button></a>
-    <a href="{% url 'page2' %}"><button>관심 분야</button></a>
-    <a href="{% url 'page3' %}"><button>개발 실적</button></a>
-    <a href="{% url 'page4' %}"><button>추천 사항</button></a>
+    <!-- 버튼 영역 -->
+    <div class="buttons">
+      <a href="{% url 'page1' %}"><button>자기 소개</button></a>
+      <a href="{% url 'page2' %}"><button>관심 분야</button></a>
+      <a href="{% url 'page3' %}"><button>개발 실적</button></a>
+      <a href="{% url 'page4' %}"><button>앞으로의 계획</button></a>
+    </div>
+
   </div>
 </body>
 </html>

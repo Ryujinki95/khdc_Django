@@ -1,11 +1,61 @@
-<!-- blog/templates/blog/page1.html -->
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-  <title>페이지 1</title>
+  <title>development</title>
+  <style>
+    .center-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <h1>여기는 페이지 1입니다</h1>
-  <a href="{% url 'index' %}">← 메인으로 돌아가기</a>
+
+  <div class="center-container">
+    <h1>개발 실적</h1>
+
+    <img src="{% static 'blog/DEVICENET.PNG' %}" alt="DEVICENET" width="200" style="border-radius: 10px; margin: 20px 0;">
+
+    <p>
+      <strong>1. Gas Box Test Kit</strong><br>
+      Hilscher CIFX Master Card를 이용한 DeviceNet Protocol 제어 <br>
+      Interface Board 설계 및 제작 / PC, Electrical Part 선정 및 배선 <br>
+      .Net Framework로 I/O Check 및 Graph 생성 및 제품 Test Program 개발
+    </p>
+
+    <img src="{% static 'blog/MODBUS.PNG' %}" alt="MODBUS" width="200" style="border-radius: 10px; margin: 20px 0;">
+
+    <p>
+      <strong>2. MFC / LFC Controller</strong><br>
+      ATMEGA328P를 이용한 H/W Circuit Drawing  <br>
+      Arduino IDE를 이용한 ATMEGA Program Coding <br>
+      Nextion Touch LCD 적용 및 HMI GUI 작업 <br>
+      .Net Framework로 MODBUS-RTU IO Check, Log Data Stack, Graph Test Program 개발
+    </p>
+
+    <img src="{% static 'blog/ETHERCAT.PNG' %}" alt="ETHERCAT" width="200" style="border-radius: 10px; margin: 20px 0;">
+
+    <p>
+      <strong>3. EtherCAT Test Program</strong><br>
+      TwinCAT을 이용한 EtherCAT Slave Test Program 개발  <br>
+      GUI 작업 및 IO Check Function Coding 및 Test
+    </p>
+
+    <img src="{% static 'blog/ETCHER.PNG' %}" alt="ETCHER" width="200" style="border-radius: 10px; margin: 20px 0;">
+
+    <p>
+      <strong>4. 반도체 장비 관련</strong><br>
+      PM Control Box 전장 및 하네스 설계  <br>
+      EFEM 전장 설계 / LoadPort Control 등등
+    </p>
+
+
+    <a href="{% url 'index' %}">← 메인으로 돌아가기</a>
+  </div>
+
 </body>
 </html>

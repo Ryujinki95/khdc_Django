@@ -1,11 +1,64 @@
-<!-- blog/templates/blog/page1.html -->
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-  <title>페이지 1</title>
+  <title>introduce</title>
+  <style>
+    .center-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <h1>자기소개</h1>
-  <a href="{% url 'index' %}">← 메인으로 돌아가기</a>
+
+  <div class="center-container">
+    <h1>자기 소개</h1>
+
+    <img src="{% static 'blog/profile.jpg' %}" alt="profile" width="200" style="border-radius: 10px; margin: 20px 0;">
+
+    <p>
+      <strong>1. 인적 사항</strong><br>
+      이름 : 유진기 / Yu Jin Ki<br>	
+      생년월일 : 1995.03.19<br>
+      이메일 : kinzilal@khcu.ac.kr<br>
+      혈액형 : AB형<br>
+      MBTI : INTJ<br>
+      병역 : 군필<br>
+      직장 : 중소기업 기술연구소 책임연구원
+    </p>
+
+    <p>
+      <strong>2. 학업</strong><br>
+      2011.03 ~ 2014.03 충북반도체고등학교<br>
+      2023.01 ~ 2025.02 동양미래대학교<br>
+      2025.03 ~ 재학 중 경희사이버대학교
+    </p>
+
+    <p>
+      <strong>3. 자격증</strong><br>
+      전자기기기능사<br>
+      ITQ한글,엑셀,파워포인트<br>
+      2종보통운전면허
+    </p>
+
+    <p>
+      <strong>4. 보유 기술</strong><br>
+      Cadence Or-CAD Capture Circuit Drawing<br>
+      Cadence Allegro Artwork<br>
+      AutoCAD Electrical Circuit Drawing<br>
+      Arduino Harness Drawing<br>
+      Arduino Firmware Coding<br>
+      STM32 Firmware Coding<br>
+      NEXTION HMI GUI Drawing<br>
+      .Net Framework C# GUI & Coding
+    </p>
+
+    <a href="{% url 'index' %}">← 메인으로 돌아가기</a>
+  </div>
+
 </body>
 </html>

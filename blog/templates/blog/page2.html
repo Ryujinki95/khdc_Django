@@ -1,11 +1,67 @@
-<!-- blog/templates/blog/page1.html -->
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-  <title>페이지 1</title>
+  <title>Interest</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .item {
+    text-align: center;
+  }
+
+  .item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  .item p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+</style>
+
 </head>
 <body>
-  <h1>여기는 페이지 1입니다</h1>
-  <a href="{% url 'index' %}">← 메인으로 돌아가기</a>
+
+  <div class="center-container">
+<h1 style="text-align: center;">관심 분야</h1>
+
+    <div class="grid-container">
+      <div class="item">
+        <img src="{% static 'blog/DUNE.PNG' %}" alt="DUNE">
+        <p><strong>소설</strong><br>듄, 전지적 독자 시점, 말리의 일곱 개의 달 등등</p>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'blog/TOWER.PNG' %}" alt="TOWER">
+        <p><strong>웹툰</strong><br>신의탑, 전지적 독자 시점, 달빛조각사 등등</p>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'blog/gunpla.png' %}" alt="gunpla">
+        <p><strong>프라 모델</strong><br>건담, 레고, 피규어 등등</p>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'blog/ETHERCAT.PNG' %}" alt="ETHERCAT">
+        <p><strong>산업 기술</strong><br>DeviceNet, EtherCAT, Modbus 등등</p>
+      </div>
+    </div>
+
+    <br>
+    <a href="{% url 'index' %}">← 메인으로 돌아가기</a>
+  </div>
+
 </body>
 </html>
