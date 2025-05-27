@@ -1,4 +1,6 @@
 <!-- blog/templates/blog/index.html -->
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +9,10 @@
 <body>
   <h1>메인 메뉴</h1>
 
+  <!-- 이미지 삽입 -->
+  <img src="{% static 'blog/logo1.png' %}" alt="로고 이미지" width="200">
+
+  <!-- 버튼들 -->
   <a href="{% url 'page1' %}"><button>페이지 1</button></a>
   <a href="{% url 'page2' %}"><button>페이지 2</button></a>
   <a href="{% url 'page3' %}"><button>페이지 3</button></a>
